@@ -64,7 +64,7 @@
   "securityDefinitions" : {
     "application" : {
       "type" : "oauth2",
-      "tokenUrl" : "https://smartertogether.dev.vmz.services/token",
+      "tokenUrl" : "https://smartertogether.dev.vmz.services/auth/token",
       "flow" : "application",
       "scopes" : {
         "write" : "write",
