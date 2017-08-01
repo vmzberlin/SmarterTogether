@@ -5,8 +5,8 @@
     "version" : "1.0.0",
     "title" : "Sample Application Flow OAuth2 Project"
   },
-  "host" : "virtserver.swaggerhub.com",
-  "basePath" : "/SmarterTogether/lamppost/1.0.0",
+  "host" : "dev.vmz.services",
+  "basePath" : "/settings/app/dev/smarterTogether",
   "schemes" : [ "https" ],
   "security" : [ {
     "application" : [ "read", "write" ]
