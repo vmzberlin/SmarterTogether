@@ -6,7 +6,7 @@
     "title" : "Sample Application Flow OAuth2 Project"
   },
   "host" : "dev.vmz.services",
-  "basePath" : "/settings/app/dev/smarterTogether",
+  "basePath" : "/api",
   "schemes" : [ "https" ],
   "security" : [ {
     "application" : [ "read", "write" ]
@@ -64,7 +64,7 @@
   "securityDefinitions" : {
     "application" : {
       "type" : "oauth2",
-      "tokenUrl" : "https://sso-dev.vmz.services/auth/realms/SmarterTogether/protocol/openid-connect/token",
+      "tokenUrl" : "https://smartertogether.dev.vmz.services",
       "flow" : "application",
       "scopes" : {
         "write" : "write",
