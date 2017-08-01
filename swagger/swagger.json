@@ -51,7 +51,7 @@
           "in" : "path",
           "description" : "ID of pet to return",
           "required" : true,
-          "type" : "integer"
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
