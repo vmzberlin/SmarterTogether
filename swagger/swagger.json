@@ -5,7 +5,7 @@
     "version" : "1.0.0",
     "title" : "Sample Application Flow OAuth2 Project"
   },
-  "host" : "dev.vmz.services",
+  "host" : "smartertogether.dev.vmz.services",
   "basePath" : "/api",
   "schemes" : [ "https" ],
   "security" : [ {
@@ -64,7 +64,7 @@
   "securityDefinitions" : {
     "application" : {
       "type" : "oauth2",
-      "tokenUrl" : "https://smartertogether.dev.vmz.services",
+      "tokenUrl" : "https://smartertogether.dev.vmz.services/token",
       "flow" : "application",
       "scopes" : {
         "write" : "write",
