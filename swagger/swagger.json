@@ -1,15 +1,15 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "This is an example of using OAuth2 Application Flow in a specification to describe security to your API.",
+    "description" : "This is the API for the Project Smarter Together",
     "version" : "1.0.0",
-    "title" : "Sample Application Flow OAuth2 Project"
+    "title" : "Smarter Together API"
   },
   "host" : "smartertogether.dev.vmz.services",
   "basePath" : "/api",
   "schemes" : [ "https" ],
   "security" : [ {
-    "application" : [ "read", "write" ]
+    "application" : [ "smarterTogether" ]
   } ],
   "paths" : {
     "/lampposts" : {
@@ -21,25 +21,37 @@
           "200" : {
             "description" : "OK"
           }
-        }
+        },
+        "security" : [ {
+          "application" : [ "read:lampposts" ]
+        } ]
       }
     },
-    "/lampposts/{lamppostId2}" : {
+    "/lampposts/{lamppostId}" : {
       "get" : {
         "summary" : "Server example operation",
         "description" : "This is an example opeartion to show how security is applied to the call.",
         "parameters" : [ {
-          "name" : "lamppostId2",
+          "name" : "lamppostId",
           "in" : "path",
-          "description" : "ID of pet to return2",
+          "description" : "ID of pet to return",
           "required" : true,
           "type" : "string"
         } ],
         "responses" : {
           "200" : {
-            "description" : "OK"
+            "description" : "OK",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/LamppostStation"
+              }
+            }
           }
-        }
+        },
+        "security" : [ {
+          "application" : [ "read:lampposts" ]
+        } ]
       }
     },
     "/lampposts/{lamppostId}/measurements" : {
@@ -57,7 +69,10 @@
           "200" : {
             "description" : "OK"
           }
-        }
+        },
+        "security" : [ {
+          "application" : [ "read:lampposts_measurements" ]
+        } ]
       }
     }
   },
@@ -67,11 +82,29 @@
       "tokenUrl" : "https://smartertogether.dev.vmz.services/auth/token",
       "flow" : "application",
       "scopes" : {
-        "write" : "write",
-        "read" : "read"
+        "read:lampposts" : "read lampposts data",
+        "smarterTogether" : "connect to smarterTogether API",
+        "read:lampposts_measurements" : "read lampposts measurements data"
       }
     }
   },
-  "definitions" : { },
+  "definitions" : {
+    "LamppostStation" : {
+      "type" : "object",
+      "required" : [ "id", "location" ],
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "location" : {
+          "type" : "object",
+          "properties" : { }
+        },
+        "name" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
   "x-aws-api-id" : "14p2fvmtw6"
 }
