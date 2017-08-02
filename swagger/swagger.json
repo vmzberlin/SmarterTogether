@@ -88,6 +88,12 @@
           "description" : "timeTo",
           "required" : false,
           "type" : "string"
+        }, {
+          "name" : "interval",
+          "in" : "query",
+          "description" : "interval",
+          "required" : false,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
