@@ -79,7 +79,7 @@
   "securityDefinitions" : {
     "application" : {
       "type" : "oauth2",
-      "tokenUrl" : "https://smartertogether.dev.vmz.services/auth/token2",
+      "tokenUrl" : "https://smartertogether.dev.vmz.services/auth/token",
       "flow" : "application",
       "scopes" : {
         "read:lampposts" : "read lampposts data",
