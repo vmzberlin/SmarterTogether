@@ -64,6 +64,18 @@
           "description" : "ID of pet to return",
           "required" : true,
           "type" : "string"
+        }, {
+          "name" : "timeFrom",
+          "in" : "query",
+          "description" : "timeFrom",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "timeTo",
+          "in" : "query",
+          "description" : "timeTo",
+          "required" : false,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
