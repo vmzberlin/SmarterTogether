@@ -79,7 +79,7 @@
   "securityDefinitions" : {
     "application" : {
       "type" : "oauth2",
-      "tokenUrl" : "https://smartertogether.dev.vmz.services/auth/token",
+      "tokenUrl" : "https://smartertogether.dev.vmz.services/auth/token2",
       "flow" : "application",
       "scopes" : {
         "read:lampposts" : "read lampposts data",
@@ -97,11 +97,27 @@
           "type" : "string"
         },
         "location" : {
-          "type" : "object",
-          "properties" : { }
+          "$ref" : "#/definitions/PointLocation"
         },
         "name" : {
           "type" : "string"
+        },
+        "properties" : {
+          "type" : "array"
+        }
+      }
+    },
+    "PointLocation" : {
+      "type" : "object",
+      "required" : [ "coordinates", "type" ],
+      "properties" : {
+        "type" : {
+          "type" : "string",
+          "enum" : [ "Point" ]
+        },
+        "coordinates" : {
+          "type" : "object",
+          "properties" : { }
         }
       }
     }
