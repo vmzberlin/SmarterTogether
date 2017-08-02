@@ -20,6 +20,12 @@
         "responses" : {
           "200" : {
             "description" : "OK"
+          },
+          "204" : {
+            "description" : "NO CONTENT"
+          },
+          "404" : {
+            "description" : "NOT FOUND CONTENT"
           }
         },
         "security" : [ {
@@ -39,6 +45,12 @@
           "type" : "string"
         } ],
         "responses" : {
+          "204" : {
+            "description" : "NO CONTENT"
+          },
+          "404" : {
+            "description" : "NOT FOUND CONTENT"
+          },
           "200" : {
             "description" : "OK",
             "schema" : {
@@ -80,6 +92,12 @@
         "responses" : {
           "200" : {
             "description" : "OK"
+          },
+          "204" : {
+            "description" : "NO CONTENT"
+          },
+          "404" : {
+            "description" : "NOT FOUND CONTENT"
           }
         },
         "security" : [ {
