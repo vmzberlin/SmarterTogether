@@ -142,15 +142,6 @@
     }
   },
   "securityDefinitions" : {
-    "implicit" : {
-      "type" : "oauth2",
-      "authorizationUrl" : "https://smartertogether.dev.vmz.services/auth",
-      "flow" : "implicit",
-      "scopes" : {
-        "write" : "allows modifying resources",
-        "read" : "allows reading resources"
-      }
-    },
     "application" : {
       "type" : "oauth2",
       "tokenUrl" : "https://smartertogether.dev.vmz.services/auth/token",
