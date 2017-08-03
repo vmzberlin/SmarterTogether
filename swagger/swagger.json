@@ -116,7 +116,13 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "OK"
+            "description" : "OK",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/TemperatureStationMeasurementValue"
+              }
+            }
           },
           "204" : {
             "description" : "NO CONTENT"
@@ -175,6 +181,23 @@
           "properties" : { }
         }
       }
+    },
+    "TemperatureStationMeasurementValue" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/TemperatureStationValue"
+      }, {
+        "properties" : {
+          "minimum" : {
+            "$ref" : "#/definitions/TemperatureStationValue"
+          },
+          "maximum" : {
+            "$ref" : "#/definitions/TemperatureStationValue"
+          },
+          "interval" : {
+            "type" : "number"
+          }
+        }
+      } ]
     }
   },
   "x-aws-api-id" : "14p2fvmtw6"
