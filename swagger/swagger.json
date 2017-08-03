@@ -16,7 +16,25 @@
       "get" : {
         "summary" : "Server example operation",
         "description" : "This is an example opeartion to show how security is applied to the call.",
-        "parameters" : [ ],
+        "parameters" : [ {
+          "name" : "lat",
+          "in" : "query",
+          "description" : "lat",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "lng",
+          "in" : "query",
+          "description" : "lng",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "radius",
+          "in" : "query",
+          "description" : "radius",
+          "required" : false,
+          "type" : "string"
+        } ],
         "responses" : {
           "200" : {
             "description" : "OK"
