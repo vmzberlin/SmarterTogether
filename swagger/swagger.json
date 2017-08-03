@@ -37,7 +37,13 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "OK"
+            "description" : "OK",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/LamppostStation"
+              }
+            }
           },
           "204" : {
             "description" : "NO CONTENT"
@@ -72,10 +78,8 @@
           "200" : {
             "description" : "OK",
             "schema" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/LamppostStation"
-              }
+              "type" : "object",
+              "properties" : { }
             }
           }
         },
