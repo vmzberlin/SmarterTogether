@@ -93,7 +93,8 @@
           "in" : "query",
           "description" : "interval",
           "required" : false,
-          "type" : "string"
+          "type" : "string",
+          "enum" : [ "hour", "month", "day" ]
         } ],
         "responses" : {
           "200" : {
