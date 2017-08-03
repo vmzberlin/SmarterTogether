@@ -21,19 +21,19 @@
           "in" : "query",
           "description" : "lat",
           "required" : false,
-          "type" : "string"
+          "type" : "number"
         }, {
           "name" : "lng",
           "in" : "query",
           "description" : "lng",
           "required" : false,
-          "type" : "string"
+          "type" : "number"
         }, {
           "name" : "radius",
           "in" : "query",
           "description" : "radius",
           "required" : false,
-          "type" : "string"
+          "type" : "number"
         } ],
         "responses" : {
           "200" : {
