@@ -170,7 +170,7 @@
         "properties" : {
           "type" : "array"
         },
-        "LastMeasuredValues" : {
+        "lastMeasuredValues" : {
           "$ref" : "#/definitions/LamppostStationMeasuredValue"
         }
       }
