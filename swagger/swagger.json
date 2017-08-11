@@ -7,7 +7,6 @@
   },
   "host" : "smartertogether.dev.vmz.services",
   "basePath" : "/api",
-  "schemes" : [ "https" ],
   "security" : [ {
     "application" : [ "smarterTogether" ]
   } ],
@@ -124,7 +123,7 @@
             "schema" : {
               "type" : "array",
               "items" : {
-                "$ref" : "#/definitions/TemperatureStationMeasurementAggregatedValue"
+                "$ref" : "#/definitions/LamppostStationMeasuredValueAggregatedValue"
               }
             }
           },
@@ -136,7 +135,7 @@
           }
         },
         "security" : [ {
-          "application" : [ "read:lampposts_measurements" ]
+          "application" : [ "read:lampposts_measurement_values" ]
         } ]
       }
     }
@@ -149,7 +148,8 @@
       "scopes" : {
         "read:lampposts" : "read lampposts data",
         "smarterTogether" : "connect to smarterTogether API",
-        "read:lampposts_measurements" : "read lampposts measurements data"
+        "read:lampposts_measurement_values" : "read lampposts lampposts_measurement_values",
+        "write:lampposts" : "write lampposts data"
       }
     }
   },
@@ -170,8 +170,8 @@
         "properties" : {
           "type" : "array"
         },
-        "lastMeasurements" : {
-          "$ref" : "#/definitions/TemperatureStationMeasurementValue"
+        "LastMeasuredValues" : {
+          "$ref" : "#/definitions/LamppostStationMeasuredValue"
         }
       }
     },
@@ -189,7 +189,7 @@
         }
       }
     },
-    "TemperatureStationMeasurementValue" : {
+    "LamppostStationMeasuredValue" : {
       "type" : "object",
       "required" : [ "humidity", "temperature", "timestamp" ],
       "properties" : {
@@ -207,16 +207,16 @@
         }
       }
     },
-    "TemperatureStationMeasurementAggregatedValue" : {
+    "LamppostStationMeasuredValueAggregatedValue" : {
       "allOf" : [ {
-        "$ref" : "#/definitions/TemperatureStationMeasurementValue"
+        "$ref" : "#/definitions/LamppostStationMeasuredValue"
       }, {
         "properties" : {
           "minimum" : {
-            "$ref" : "#/definitions/TemperatureStationMeasurementValue"
+            "$ref" : "#/definitions/LamppostStationMeasuredValue"
           },
           "maximum" : {
-            "$ref" : "#/definitions/TemperatureStationMeasurementValue"
+            "$ref" : "#/definitions/LamppostStationMeasuredValue"
           },
           "interval" : {
             "type" : "number"
@@ -224,6 +224,5 @@
         }
       } ]
     }
-  },
-  "x-aws-api-id" : "14p2fvmtw6"
+  }
 }
