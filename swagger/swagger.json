@@ -123,7 +123,7 @@
             "schema" : {
               "type" : "array",
               "items" : {
-                "$ref" : "#/definitions/LamppostStationMeasuredValueAggregatedValue"
+                "$ref" : "#/definitions/LamppostStationMeasuredAggregatedValue"
               }
             }
           },
@@ -207,7 +207,7 @@
         }
       }
     },
-    "LamppostStationMeasuredValueAggregatedValue" : {
+    "LamppostStationMeasuredAggregatedValue" : {
       "allOf" : [ {
         "$ref" : "#/definitions/LamppostStationMeasuredValue"
       }, {
