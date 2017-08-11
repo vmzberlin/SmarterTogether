@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "This is the API for the Project Smarter Together",
+    "description" : "This is the API of the Smart Data Platform Munich in the EU project Smarter Together",
     "version" : "1.0.0",
     "title" : "Smarter Together API"
   },
@@ -88,7 +88,7 @@
         } ]
       }
     },
-    "/lampposts/{lamppostId}/measurements" : {
+    "/lampposts/{lamppostId}/measuredValues" : {
       "get" : {
         "summary" : "Server example operation",
         "description" : "This is an example opeartion to show how security is applied to the call.",
