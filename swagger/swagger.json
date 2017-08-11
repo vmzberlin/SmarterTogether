@@ -14,7 +14,7 @@
     "/lampposts" : {
       "get" : {
         "summary" : "Server example operation",
-        "description" : "This is an example opeartion to show how security is applied to the call.",
+        "description" : "",
         "parameters" : [ {
           "name" : "lat",
           "in" : "query",
@@ -63,7 +63,7 @@
         "parameters" : [ {
           "name" : "lamppostId",
           "in" : "path",
-          "description" : "ID of pet to return",
+          "description" : "ID of Station to return data for",
           "required" : true,
           "type" : "string"
         } ],
@@ -90,11 +90,11 @@
     "/lampposts/{lamppostId}/measuredValues" : {
       "get" : {
         "summary" : "Server example operation",
-        "description" : "This is an example opeartion to show how security is applied to the call.",
+        "description" : "",
         "parameters" : [ {
           "name" : "lamppostId",
           "in" : "path",
-          "description" : "ID of pet to return",
+          "description" : "",
           "required" : true,
           "type" : "string"
         }, {
