@@ -98,15 +98,15 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "timeFrom",
+          "name" : "timestampFrom",
           "in" : "query",
-          "description" : "timeFrom",
+          "description" : "timestampFrom",
           "required" : false,
           "type" : "string"
         }, {
-          "name" : "timeTo",
+          "name" : "timestampTo",
           "in" : "query",
-          "description" : "timeTo",
+          "description" : "timestampTo",
           "required" : false,
           "type" : "string"
         }, {
