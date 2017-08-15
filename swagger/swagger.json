@@ -135,7 +135,7 @@
           }
         },
         "security" : [ {
-          "application" : [ "read:lampposts_measurement_values" ]
+          "application" : [ "read:lamppostStationMeasuredValue" ]
         } ]
       }
     }
