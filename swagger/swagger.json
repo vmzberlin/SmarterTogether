@@ -148,7 +148,7 @@
       "scopes" : {
         "read:lampposts" : "read lampposts data",
         "smarterTogether" : "connect to smarterTogether API",
-        "read:lampposts_measurement_values" : "read lampposts lampposts_measurement_values",
+        "read:lamppostStationMeasuredValue" : "read lamppostStationMeasuredValue",
         "write:lampposts" : "write lampposts data"
       }
     }
